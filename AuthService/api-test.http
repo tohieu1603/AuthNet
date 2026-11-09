@@ -1,0 +1,63 @@
+### AuthService REST Client Requests
+@baseUrl = http://localhost:5000
+
+### 1. Health Check
+GET {{baseUrl}}/health
+
+### 2. Register New User
+# @name register
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "username": "tester01",
+  "email": "tester01@example.com",
+  "password": "Password123!",
+  "firstName": "John",
+  "lastName": "Doe"
+}
+
+### 3. Login
+# @name login
+POST {{baseUrl}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "usernameOrEmail": "tester01",
+  "password": "Password123!"
+}
+
+### 4. Get Current User Principal (Reads ACCESS_TOKEN cookie or Bearer token)
+GET {{baseUrl}}/api/v1/auth/me
+
+### 5. Get Full Profile
+GET {{baseUrl}}/api/v1/users/me
+
+### 6. Update Email
+PATCH {{baseUrl}}/api/v1/users/me/email
+Content-Type: application/json
+
+{
+  "newEmail": "tester01_updated@example.com"
+}
+
+### 7. Refresh Token (Rotates refresh token)
+POST {{baseUrl}}/api/v1/auth/refresh
+Content-Type: application/json
+
+{}
+
+### 8. Change Password
+POST {{baseUrl}}/api/v1/auth/change-password
+Content-Type: application/json
+
+{
+  "oldPassword": "Password123!",
+  "newPassword": "NewPassword456!@"
+}
+
+### 9. Logout
+POST {{baseUrl}}/api/v1/auth/logout
+
+### 10. Swagger Docs
+GET {{baseUrl}}/swagger/v1/swagger.json

@@ -1,0 +1,33 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "auth-service-auth-route": {
+        "ClusterId": "auth-service-cluster",
+        "RateLimiterPolicy": "auth-policy",
+        "Match": {
+          "Path": "/api/v1/auth/{**catch-all}"
+        }
+      },
+      "auth-service-users-route": {
+        "ClusterId": "auth-service-cluster",
+        "RateLimiterPolicy": "default-policy",
+        "Match": {
+          "Path": "/api/v1/users/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "auth-service-cluster": {
+        "LoadBalancingPolicy": "RoundRobin",
+        "HttpRequest": {
+          "Timeout": "00:00:10"
+        },
+        "Destinations": {
+          "auth-node-1": {
+            "Address": "http://localhost:5000"
+          }
+        }
+      }
+    }
+  }
+}

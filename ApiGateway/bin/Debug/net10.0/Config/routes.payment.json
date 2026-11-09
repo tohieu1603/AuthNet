@@ -1,0 +1,26 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "payment-service-route": {
+        "ClusterId": "payment-service-cluster",
+        "RateLimiterPolicy": "default-policy",
+        "Match": {
+          "Path": "/api/v1/payments/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "payment-service-cluster": {
+        "LoadBalancingPolicy": "RoundRobin",
+        "HttpRequest": {
+          "Timeout": "00:00:20"
+        },
+        "Destinations": {
+          "payment-node-1": {
+            "Address": "http://localhost:5004"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/Users/admin/Net/CommonLib/bin/Debug/net10.0/CommonLib.deps.json
+/Users/admin/Net/CommonLib/bin/Debug/net10.0/CommonLib.dll
+/Users/admin/Net/CommonLib/bin/Debug/net10.0/CommonLib.pdb
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.csproj.AssemblyReference.cache
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.AssemblyInfoInputs.cache
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.AssemblyInfo.cs
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.csproj.CoreCompileInputs.cache
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.dll
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/refint/CommonLib.dll
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/CommonLib.pdb
+/Users/admin/Net/CommonLib/obj/Debug/net10.0/ref/CommonLib.dll

@@ -1,0 +1,26 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "order-service-route": {
+        "ClusterId": "order-service-cluster",
+        "RateLimiterPolicy": "default-policy",
+        "Match": {
+          "Path": "/api/v1/orders/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "order-service-cluster": {
+        "LoadBalancingPolicy": "RoundRobin",
+        "HttpRequest": {
+          "Timeout": "00:00:15"
+        },
+        "Destinations": {
+          "order-node-1": {
+            "Address": "http://localhost:5003"
+          }
+        }
+      }
+    }
+  }
+}

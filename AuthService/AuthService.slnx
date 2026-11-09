@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/0.Common/">
+    <Project Path="../CommonLib/CommonLib.csproj" />
+  </Folder>
+  <Folder Name="/src/1.Domain/">
+    <Project Path="src/1.Domain/AuthService.Domain/AuthService.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/2.Application/">
+    <Project Path="src/2.Application/AuthService.Application/AuthService.Application.csproj" />
+  </Folder>
+  <Folder Name="/src/3.Infrastructure/">
+    <Project Path="src/3.Infrastructure/AuthService.Infrastructure/AuthService.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/src/4.Interfaces/">
+    <Project Path="src/4.Interfaces/AuthService.Api/AuthService.Api.csproj" />
+    <Project Path="src/4.Interfaces/AuthService.Grpc/AuthService.Grpc.csproj" />
+  </Folder>
+</Solution>

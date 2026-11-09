@@ -1,0 +1,44 @@
+{
+  "ReverseProxy": {
+    "Routes": {
+      "catalog-service-route": {
+        "ClusterId": "catalog-service-cluster",
+        "RateLimiterPolicy": "default-policy",
+        "Match": {
+          "Path": "/api/v1/catalog/{**catch-all}"
+        }
+      },
+      "cart-service-route": {
+        "ClusterId": "cart-service-cluster",
+        "RateLimiterPolicy": "default-policy",
+        "Match": {
+          "Path": "/api/v1/cart/{**catch-all}"
+        }
+      }
+    },
+    "Clusters": {
+      "catalog-service-cluster": {
+        "LoadBalancingPolicy": "RoundRobin",
+        "HttpRequest": {
+          "Timeout": "00:00:10"
+        },
+        "Destinations": {
+          "catalog-node-1": {
+            "Address": "http://localhost:5001"
+          }
+        }
+      },
+      "cart-service-cluster": {
+        "LoadBalancingPolicy": "RoundRobin",
+        "HttpRequest": {
+          "Timeout": "00:00:10"
+        },
+        "Destinations": {
+          "cart-node-1": {
+            "Address": "http://localhost:5002"
+          }
+        }
+      }
+    }
+  }
+}

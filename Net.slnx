@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/Common/">
+    <Project Path="CommonLib/CommonLib.csproj" />
+  </Folder>
+  <Folder Name="/Gateway/">
+    <Project Path="ApiGateway/ApiGateway.csproj" />
+  </Folder>
+  <Folder Name="/Services/Auth/">
+    <Project Path="AuthService/src/1.Domain/AuthService.Domain/AuthService.Domain.csproj" />
+    <Project Path="AuthService/src/2.Application/AuthService.Application/AuthService.Application.csproj" />
+    <Project Path="AuthService/src/3.Infrastructure/AuthService.Infrastructure/AuthService.Infrastructure.csproj" />
+    <Project Path="AuthService/src/4.Interfaces/AuthService.Api/AuthService.Api.csproj" />
+    <Project Path="AuthService/src/4.Interfaces/AuthService.Grpc/AuthService.Grpc.csproj" />
+  </Folder>
+</Solution>

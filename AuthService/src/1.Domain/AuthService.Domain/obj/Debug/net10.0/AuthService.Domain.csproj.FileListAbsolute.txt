@@ -1,0 +1,15 @@
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.AssemblyInfoInputs.cache
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.AssemblyInfo.cs
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.csproj.CoreCompileInputs.cache
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/bin/Debug/net10.0/AuthService.Domain.deps.json
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/bin/Debug/net10.0/AuthService.Domain.dll
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/bin/Debug/net10.0/AuthService.Domain.pdb
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.dll
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/refint/AuthService.Domain.dll
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.pdb
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/ref/AuthService.Domain.dll
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/bin/Debug/net10.0/CommonLib.dll
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/bin/Debug/net10.0/CommonLib.pdb
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthService.Domain.csproj.AssemblyReference.cache
+/Users/admin/Net/AuthService/src/1.Domain/AuthService.Domain/obj/Debug/net10.0/AuthServ.85EED38A.Up2Date

@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package hieu.auth.v1;
+
+option csharp_namespace = "AuthService.Grpc.Protos";
+
+// =====================================================================
+// AuthService: inter-service identity + authorization RPCs.
+// Low-latency calls from sibling microservices.
+// =====================================================================
+service AuthService {
+  // Parses and validates the access JWT, returning decoded claims.
+  rpc VerifyToken(VerifyTokenRequest) returns (VerifyTokenResponse);
+
+  // Returns true when the user has the given role.
+  rpc CheckRole(CheckRoleRequest) returns (CheckRoleResponse);
+
+  // Returns true when any of the user's roles grants the permission.
+  rpc CheckPermission(CheckPermissionRequest) returns (CheckPermissionResponse);
+
+  // Read-only profile lookup by user id.
+  rpc GetUser(GetUserRequest) returns (GetUserResponse);
+}
+
+// ------ VerifyToken ------
+
+message VerifyTokenRequest {
+  string access_token = 1;
+}
+
+message VerifyTokenResponse {
+  bool   valid          = 1;
+  string user_id        = 2;
+  string username       = 3;
+  int32  token_version  = 4;
+  repeated string roles = 5;
+}
+
+// ------ CheckRole / CheckPermission ------
+
+message CheckRoleRequest {
+  string user_id   = 1;
+  string role_name = 2;
+}
+
+message CheckRoleResponse {
+  bool has_role = 1;
+}
+
+message CheckPermissionRequest {
+  string user_id         = 1;
+  string permission_name = 2;
+}
+
+message CheckPermissionResponse {
+  bool allowed = 1;
+}
+
+// ------ GetUser ------
+
+message GetUserRequest {
+  string user_id = 1;
+}
+
+message GetUserResponse {
+  bool   found      = 1;
+  string user_id    = 2;
+  string username   = 3;
+  string email      = 4;
+  bool   active     = 5;
+  repeated string roles       = 6;
+  repeated string permissions = 7;
+}
