@@ -1,0 +1,37 @@
+# .NET build outputs
+**/bin/
+**/obj/
+**/out/
+**/TestResults/
+**/artifacts/
+**/packages/
+
+# IDE and user-specific files
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+**/appsettings.*.local.json
+
+# Local tool and package state
+.local/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Test and coverage reports
+coverage/
+coverage.*/
+*.coverage
+*.coveragexml
